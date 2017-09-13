@@ -1,0 +1,354 @@
+/*
+
+==> Having & group by Clous
+
+==> Select and store result in Variable
+==> Select and store result in File
+
+https://dev.mysql.com/doc/refman/5.7/en/load-data.html
+
+==> Union  
+https://dev.mysql.com/doc/refman/5.7/en/union.html
+
+==> Subquery 
+
+*/
+
+
+
+
+
+
+
+
+
+
+ select * from manufacturers;
++------+-----------------+
+| Code | Name            |
++------+-----------------+
+|    1 | Sony            |
+|    2 | Creative Labs   |
+|    3 | Hewlett-Packard |
+|    4 | Iomega          |
+|    5 | Fujitsu         |
+|    6 | Winchester      |
+|    7 | Lenovo          |
++------+-----------------+
+
+
+
+
+select * from Products;
++------+-----------------+-------+--------------+
+| Code | Name            | Price | Manufacturer |
++------+-----------------+-------+--------------+
+|    1 | Hard drive      |   500 |            5 |
+|    2 | Memory          |   120 |            6 |
+|    3 | ZIP drive       |   150 |            4 |
+|    4 | Floppy disk     |     5 |            6 |
+|    5 | Monitor         |   240 |            1 |
+|    6 | DVD drive       |   180 |            2 |
+|    7 | CD drive        |    90 |            2 |
+|    8 | Printer         |   270 |            3 |
+|    9 | Toner cartridge |    66 |            3 |
+|   10 | DVD burner      |   180 |            2 |
+|   11 | Speacker        |   320 |            6 |
+|   12 | 1 Tb Hard drive |   764 |            7 |
+|   13 | 2 Tb Hard drive |   964 |            7 |
+|   14 | 4 Tb Hard drive |  1234 |            7 |
++------+-----------------+-------+--------------+
+
+
+
+select * from Products where Price > 100 group by Manufacturer;
++------+-----------------+-------+--------------+
+| Code | Name            | Price | Manufacturer |
++------+-----------------+-------+--------------+
+|    5 | Monitor         |   240 |            1 |
+|    6 | DVD drive       |   180 |            2 |
+|    8 | Printer         |   270 |            3 |
+|    3 | ZIP drive       |   150 |            4 |
+|    1 | Hard drive      |   500 |            5 |
+|    2 | Memory          |   120 |            6 |
+|   12 | 1 Tb Hard drive |   764 |            7 |
++------+-----------------+-------+--------------+
+
+
+select * from Products where Price < 100 group by Manufacturer;
++------+-----------------+-------+--------------+
+| Code | Name            | Price | Manufacturer |
++------+-----------------+-------+--------------+
+|    7 | CD drive        |    90 |            2 |
+|    9 | Toner cartridge |    66 |            3 |
+|    4 | Floppy disk     |     5 |            6 |
++------+-----------------+-------+--------------+
+
+
+
+select Name , count(*) from Products where Price >100 group by Manufacturer;
++-----------------+----------+
+| Name            | count(*) |
++-----------------+----------+
+| Monitor         |        1 |
+| DVD drive       |        2 |
+| Printer         |        1 |
+| ZIP drive       |        1 |
+| Hard drive      |        1 |
+| Memory          |        2 |
+| 1 Tb Hard drive |        3 |
++-----------------+----------+
+
+
+
+select Name , count(*) from Products  group by Manufacturer having avg(Price) > 200;
++-----------------+----------+
+| Name            | count(*) |
++-----------------+----------+
+| Monitor         |        1 |
+| Hard drive      |        1 |
+| 1 Tb Hard drive |        3 |
++-----------------+----------+
+
+
+Problem : select Name , count(*) from Products  group by Manufacturer where avg(Price) > 200 and Manufacturer = 5;  //  cant use like this 
+
+So we use 
+
+
+Solution :  select Name , count(*) from Products  group by Manufacturer having avg(Price) > 200 and Manufacturer = 5;
+
++------------+----------+
+| Name       | count(*) |
++------------+----------+
+| Hard drive |        1 |
++------------+----------+
+
+
+/*
+
+select Manufacturer , count(*) , avg(Price) from Products group by Manufacturer Having avg(Price) > 50 and Name Like "%drive%";
+ERROR 1054 (42S22): Unknown column 'Name' in 'having clause'
+
+You Have to Display the column name which column you are using in having clouse
+
+
+*/
+
+
+ select Name, Manufacturer , count(*) , avg(Price) from Products group by Manufacturer Having avg(Price) > 50 and Name Like "%drive%";
+ 
++-----------------+--------------+----------+------------+
+| Name            | Manufacturer | count(*) | avg(Price) |
++-----------------+--------------+----------+------------+
+| DVD drive       |            2 |        3 |   150.0000 |
+| ZIP drive       |            4 |        1 |   150.0000 |
+| Hard drive      |            5 |        1 |   500.0000 |
+| 1 Tb Hard drive |            7 |        3 |   987.3333 |
++-----------------+--------------+----------+------------+
+
+
+
+/*
+
+
+Your Query Shoul return only one record
+
+if many recodrs are returned your variable return null value 
+
+*/
+
+ select Name from Products where name = 'monitor' into @var_Monitor;
+ 
+ 
+ select @var_Monitor;
++--------------+
+| @var_Monitor |
++--------------+
+| Monitor      |
++--------------+
+ 
+ 
+ /*
+ 
+ := use at row level 
+ 
+ */
+ 
+ 
+  select @Name := Name from Products where name = 'monitor';
++---------------+
+| @Name := Name |
++---------------+
+| Monitor       |
++---------------+
+
+// Two result One variable
+
+
+select Name , Price from Products where name = 'monitor' into @var_Monitor;
+ERROR 1222 (21000): The used SELECT statements have a different number of columns
+
+
+ select Name , @tPrice:=Price  from Products where name = 'monitor' ;
++---------+----------------+
+| Name    | @tPrice:=Price |
++---------+----------------+
+| Monitor |            240 |
++---------+----------------+
+
+
+\\storage\storage$\719320\Documents\CSD Day 4 (12 Sep).txt
+
+
+
+
+select Name From Products UNION Select Code From Manufacturers;
++-----------------+
+| Name            |
++-----------------+
+| Hard drive      |
+| Memory          |
+| ZIP drive       |
+| Floppy disk     |
+| Monitor         |
+| DVD drive       |
+| CD drive        |
+| Printer         |
+| Toner cartridge |
+| DVD burner      |
+| Speacker        |
+| 1 Tb Hard drive |
+| 2 Tb Hard drive |
+| 4 Tb Hard drive |
+| 1               |
+| 2               |
+| 3               |
+| 4               |
+| 5               |
+| 6               |
+| 7               |
++-----------------+
+
+
+
+ select Name From Products ; Select Code From Manufacturers;
++-----------------+
+| Name            |
++-----------------+
+| Hard drive      |
+| Memory          |
+| ZIP drive       |
+| Floppy disk     |
+| Monitor         |
+| DVD drive       |
+| CD drive        |
+| Printer         |
+| Toner cartridge |
+| DVD burner      |
+| Speacker        |
+| 1 Tb Hard drive |
+| 2 Tb Hard drive |
+| 4 Tb Hard drive |
++-----------------+
+14 rows in set (0.00 sec)
+
++------+
+| Code |
++------+
+|    1 |
+|    2 |
+|    3 |
+|    4 |
+|    5 |
+|    6 |
+|    7 |
++------+
+
+
+// ============================ Table Structure ================
+
+
+ desc Products;
++--------------+---------------+------+-----+---------+-------+
+| Field        | Type          | Null | Key | Default | Extra |
++--------------+---------------+------+-----+---------+-------+
+| Code         | int(11)       | NO   | PRI | NULL    |       |
+| Name         | varchar(255)  | NO   |     | NULL    |       |
+| Price        | decimal(10,0) | NO   |     | NULL    |       |
+| Manufacturer | int(11)       | NO   | MUL | NULL    |       |
++--------------+---------------+------+-----+---------+-------+
+
+
+
+
+// ================= Sub Query =============   with IN (when sub query returns more then one value)
+
+select Name from Manufacturers where Code IN (select Manufacturer from Products where Price >100 );
+
+
++-----------------+
+| Name            |
++-----------------+
+| Sony            |
+| Creative Labs   |
+| Hewlett-Packard |
+| Iomega          |
+| Fujitsu         |
+| Winchester      |
+| Lenovo          |
++-----------------+
+
+
+
+// ================= Sub Query =============   with = (when sub query return One record ) 
+ 
+select Name from Manufacturers where Code = (select Manufacturer from Products where Price >100 );
+ERROR 1242 (21000): Subquery returns more than 1 row
+
+
+// ================= Sub Query =============    select those manufacturers who produces drives
+
+select *  from Manufacturers where Code IN (select Manufacturer from Products where Name like "%drive%");
++------+---------------+
+| Code | Name          |
++------+---------------+
+|    2 | Creative Labs |
+|    4 | Iomega        |
+|    5 | Fujitsu       |
+|    7 | Lenovo        |
++------+---------------+
+
+
+
+// =======================  3 level Sub Query ============  min price product Manufacturer
+
+
+select *  from Manufacturers where Code IN (select Manufacturer from Products where Price = (select min(Price) from Products   ));
++------+------------+
+| Code | Name       |
++------+------------+
+|    6 | Winchester |
++------+------------+
+
+//===================   ANY use ============
+
+ select *  from Products where Price  > ANY  (select Price from Products);
+ 
++------+-----------------+-------+--------------+
+| Code | Name            | Price | Manufacturer |
++------+-----------------+-------+--------------+
+|    1 | Hard drive      |   500 |            5 |
+|    2 | Memory          |   120 |            6 |
+|    3 | ZIP drive       |   150 |            4 |
+|    5 | Monitor         |   240 |            1 |
+|    6 | DVD drive       |   180 |            2 |
+|    7 | CD drive        |    90 |            2 |
+|    8 | Printer         |   270 |            3 |
+|    9 | Toner cartridge |    66 |            3 |
+|   10 | DVD burner      |   180 |            2 |
+|   11 | Speacker        |   320 |            6 |
+|   12 | 1 Tb Hard drive |   764 |            7 |
+|   13 | 2 Tb Hard drive |   964 |            7 |
+|   14 | 4 Tb Hard drive |  1234 |            7 |
++------+-----------------+-------+--------------+
