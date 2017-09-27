@@ -1,0 +1,802 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red255\green255\blue255;\red170\green13\blue145;
+\red0\green0\blue0;\red196\green26\blue22;\red28\green0\blue207;\red46\green13\blue110;\red63\green110\blue116;
+\red92\green38\blue153;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c45600\c0;\csgray\c100000;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c24700\c43100\c45600;
+\csgenericrgb\c35900\c14900\c60100;}
+\margl1440\margr1440\vieww40460\viewh22740\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 \
+//\'97\'97\'97\'97\'97 tuples\
+\
+var x =(10, 20, 30)\
+\
+print(x.0) // gives 10\
+\
+print(x.1) // gives 20\
+\
+print(x.3) // gives 30\
+\
+\
+var x = (10, 20, 30)\
+\
+print(x.0)    // o/p 10\
+print(x.1)		// o/p 20\
+print(x.2)		// o/p 30\
+\
+\
+var y = (x.0,x.1)\
+\
+print(y)			// o/p (10,20)\
+\
+\
+var (a1,a2) = y\
+\
+print (a1)		//o/p 10\
+print (a2)		//o/p 20\
+\
+\
+//-----------  we want x.0 and x.2 values in b1 and b2\
+		// we use _ to obmit x.1 value\
+\
+var (b1,_,b2) = x\
+\
+print(b1)   //o/p 10\
+print(b2)   //o/p 30\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 write a program with student information (5 Records)\
+\
+StudentID\
+StudentName - [StudentFirstName, StudentLastName]\
+StudentAddress  - [Street, Number, City, ZipCode]\
+Birthdate - [dd/mm/yy]\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+                                                                                                                                                                                                                                                                                                                                                                            \
+\
+\
+\
+\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 //: Playground - noun: a place where people can play
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 import\cf5  UIKit
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  str = \cf6 "Hello, playground"
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf4 var\cf5  x = (\cf7 10\cf5 , \cf7 20\cf5 , \cf7 30\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf9 x\cf5 .\cf7 0\cf5 )    \cf2 // o/p 10
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf9 x\cf5 .\cf7 1\cf5 )        \cf2 // o/p 20
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf9 x\cf5 .\cf7 2\cf5 )        \cf2 // o/p 30
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf4 var\cf5  y = (\cf9 x\cf5 .\cf7 0\cf5 ,\cf9 x\cf5 .\cf7 1\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf9 y\cf5 )            \cf2 // o/p (10,20)
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf4 var\cf5  (a1,a2) = \cf9 y
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5  (\cf9 a1\cf5 )        \cf2 //o/p 10
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5  (\cf9 a2\cf5 )        \cf2 //o/p 20
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf2 //-----------  we want x.0 and x.2 values in b1 and b2
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 // we use _ to obmit x.1 value
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  (b1,\cf4 _\cf5 ,b2) = \cf9 x
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf9 b1\cf5 )   \cf2 //o/p 10
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf9 b2\cf5 )   \cf2 //o/p 30
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf2 //-------------------    arrays
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  array1 = [\cf7 10\cf5 , \cf7 20\cf5 , \cf7 30\cf5 , \cf7 40\cf5 , \cf7 50\cf5 ]
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "-------------------    arrays"\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5  (\cf9 array1\cf5 [\cf7 0\cf5 ])   \cf2 // o/p 10
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf9 array1\cf5 [\cf7 4\cf5 ])  \cf2 // o/p 50
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf2 /* var b:[Int]
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 b[0] = 100;
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  error of veriabble not declared
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  */
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 var b:[Int] = []
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 b[0] = 65
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  error of out of index
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 */
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 //-------------- use of append in array
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf4 var\cf5  b = [\cf10 Int\cf5 ]()
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Array size is : "\cf5  , \cf9 b\cf5 .\cf10 count\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf9 b\cf5 .\cf8 append\cf5 (\cf7 56\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf9 b\cf5 [\cf7 0\cf5 ])
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Array size is : "\cf5  , \cf9 b\cf5 .\cf10 count\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf9 b\cf5 [\cf7 0\cf5 ] = \cf7 45
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Array : "\cf5  , \cf9 b\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5  \cf8 print\cf5 (\cf6 "Array size is : "\cf5  , \cf9 b\cf5 .\cf10 count\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf9 b\cf5 .\cf8 append\cf5 (\cf7 78\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Array : "\cf5  , \cf9 b\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Array size is : "\cf5  , \cf9 b\cf5 .\cf10 count\cf5 )
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf2 // -----------   ANY       --------------  create array of any type
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  Here we have ANY key word to create any type of array
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  */
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  c = [\cf4 Any\cf5 ]();
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 c\cf5 .\cf8 append\cf5 (\cf7 100\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 c\cf5 .\cf8 append\cf5 (\cf6 "Patel"\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 c\cf5 .\cf8 append\cf5 (\cf6 "lalala"\cf5 )
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Values in C array"\cf5  , \cf9 c\cf5 )
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf2 // ----------------------------                 ---------------------------
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "1.1  --------------------------- \\n\\n\\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  Here if you say
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  var1 = [1...4]  this will print values in for loop like   0...4
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  var1 = 0...4   and if we remove []
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  o/p is
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  var1 items :  0
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  var1 items :  1
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  var1 items :  2
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  var1 items :  3
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  var1 items :  4
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  */
+\f0\fs24 \cf0 \
+\
+\
+\
+
+\f1\fs22 \cf4 var\cf5  var1 = \cf7 0\cf5 ...\cf7 4
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "var1.startIndex  :  "\cf5 ,\cf9 var1\cf5 .\cf10 startIndex\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 for\cf5  t \cf4 in\cf5  \cf9 var1
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5     \cf8 print\cf5 (\cf6 "var1 items : "\cf5  , t)
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \}
+\f0\fs24 \cf0 \
+\
+\
+\
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 here we have  array1 = [10, 20, 30, 40, 50]
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  we want values 20,30,40
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  that is index range of 1 to 3
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 */
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 " -----------  fatch vaues of sliced array    ----------- "\cf5  )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "1.2  -------------------- using loop   \\n\\n\\n"\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf4 var\cf5  var2 = \cf9 array1\cf5 [\cf7 1\cf5 ...\cf7 3\cf5 ]
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf4 for\cf5  j \cf4 in\cf5  \cf9 var2
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5     \cf8 print\cf5 (\cf6 "values in var2"\cf5  , j)
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \}
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  output
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  values in var2 20
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  values in var2 30
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  values in var2 40
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  */
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 " \\n 1.3  --------------------------- using index "\cf5  )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  print("value of 0 index of var2" , var2[0])
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  we here take var2 = array1[1...3]
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  so we are taking a slice from the array1
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  not the var2 hase the index values that is 1, 2 and 3
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 */
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "index 1 "\cf5  , \cf9 var2\cf5 [\cf7 1\cf5 ])
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "index 2 "\cf5  , \cf9 var2\cf5 [\cf7 2\cf5 ])
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "index 3 "\cf5  , \cf9 var2\cf5 [\cf7 3\cf5 ])
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  out put is
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  index 1  20
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  index 2  30
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  index 3  40
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2  */
+\f0\fs24 \cf0 \
+\
+\
+\
+\
+
+\f1\fs22 \cf4 var\cf5  repeatingArray = \cf10 Array\cf5 (repeating: \cf7 0.0\cf5 , count: \cf7 5\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf4 for\cf5  t \cf4 in\cf5  \cf9 repeatingArray
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5    \cf8 print\cf5 (t)
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \}
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 /*   optput
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  0.0
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  0.0
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  0.0
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  */
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf2 /*
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 var CombineArray = array1 + repeatingArray
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2  gives ambigous error
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  beacouse of value types are diffrent
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2 */
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "\\n 1.5  -------------- Conbine arrays------------- \\n\\n\\n"\cf5  )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  repeatingArray1 = \cf10 Array\cf5 (repeating: \cf7 60\cf5 , count: \cf7 5\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  CombineArrays = \cf9 array1\cf5  + \cf9 repeatingArray1
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Value of Combine Array "\cf5  , \cf9 CombineArrays\cf5 )
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 " \\n\\n 1.6   ------------  Sets    ---------------- \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2 //Assign values at time of declaration
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf4 var\cf5  set1: \cf10 Set\cf5 <\cf10 String\cf5 > = [\cf6 "ONE"\cf5  , \cf6 "TWO"\cf5  , \cf6 "THREE"\cf5  ,\cf6 "FOUR"\cf5  ]
+\f0\fs24 \cf0 \
+\
+\
+\
+
+\f1\fs22 \cf2 //Assign value after declaration
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf4 var\cf5  set2 = \cf10 Set\cf5 <\cf10 Int\cf5 >()
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf9 set2\cf5 .\cf8 insert\cf5 (\cf7 203\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 set2\cf5 .\cf8 insert\cf5 (\cf7 405\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 set2\cf5 .\cf8 insert\cf5 (\cf7 0\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 set2\cf5 .\cf8 insert\cf5 (\cf7 10\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 set2\cf5 .\cf8 insert\cf5 (\cf7 2\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 set2\cf5 .\cf8 insert\cf5 (\cf7 4\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 set2\cf5 .\cf8 insert\cf5 (\cf7 57\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5  (\cf6 "Set2 values "\cf5  , \cf9 set2\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "Capacity of set2 : "\cf5  ,\cf9 set2\cf5 .\cf10 capacity\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 " \\n\\n 1.7   ------------  Dictionary   is a <Key, Value> pair array or set  ---------------- \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  dicti1 = \cf10 Dictionary\cf5 <\cf10 Int\cf5 ,\cf10 String\cf5 >()
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf9 dicti1\cf5  = [\cf7 1\cf5 :\cf6 "One"\cf5  , \cf7 2\cf5 :\cf6 "Two"\cf5  , \cf7 3\cf5 :\cf6 "Three"\cf5  , \cf7 4000\cf5 :\cf6 "four thousand"\cf5 ]
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "dicti1 value"\cf5  , \cf9 dicti1\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "dicti1 description "\cf5  , \cf9 dicti1\cf5 .\cf10 description\cf5  ,\cf6 "\\n\\n\\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "diciti1 value of key 1 "\cf5  , \cf9 dicti1\cf5 [\cf7 1\cf5 ])
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "diciti1 value of key 1 "\cf5  , \cf9 dicti1\cf5 [\cf7 2\cf5 ])
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "diciti1 value of key 4000 "\cf5  , \cf9 dicti1\cf5 [\cf7 4000\cf5 ] , \cf6 " \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 " \\n\\n 1.8   ------------  Fatch Dicitinory values with loop as key,value pair   ---------------- \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 for\cf5  (i,j) \cf4 in\cf5  \cf9 dicti1
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5     \cf8 print\cf5 (\cf6 " Dicti1 Vlaues are    \cf5 \\\cf6 (\cf5 i\cf6 ) : \cf5 \\\cf6 (\cf5 j \cf6 ) "\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \}
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "   ------------  Add Key n value to Dicitinory  ---------------- \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf9 dicti1\cf5 [\cf7 45\cf5 ] = \cf6 "Fourty Five"
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "dicti1 description "\cf5  , \cf9 dicti1\cf5 .\cf10 description\cf5  ,\cf6 "\\n\\n\\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "   ------------  Dicitinory  with ANY datatype ---------------- \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 var\cf5  dicti2: \cf10 Dictionary\cf5 <\cf10 String\cf5  , \cf4 Any\cf5 >  = [\cf6 "4 and 5"\cf5   :  \cf7 45\cf5  ,   \cf6 "6 and 7"\cf5  : \cf7 67\cf5 , \cf6 "first chracter"\cf5  : \cf6 "abc"\cf5   ]
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf9 dicti2\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "   ------------  Dicitinory  AnuObject ---------------- \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf4 var\cf5  dicti3 : \cf10 Dictionary\cf5 <\cf10 String\cf5 , \cf10 AnyObject\cf5 > = [\cf6 "for"\cf5  : \cf7 1\cf5  \cf4 as\cf5  \cf10 AnyObject\cf5  , \cf6 "Six"\cf5  : \cf7 4\cf5  \cf4 as\cf5  \cf10 AnyObject\cf5 ]
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 dicti3\cf5 [\cf6 "keyr"\cf5 ] = \cf4 nil
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 dicti3\cf5 [\cf6 "Date"\cf5 ] = \cf10 Date\cf5 () \cf4 as\cf5  \cf10 AnyObject\cf5    \cf2 // or NSDate()  will work Same
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf9 dicti3\cf5 [\cf6 "integer"\cf5 ] = \cf7 32\cf5  \cf4 as\cf5  \cf10 AnyObject
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "dicit3 : "\cf5  , \cf9 dicti3\cf5 .\cf10 description\cf5  ,\cf6 "\\n \\n"\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "   -------     Retrival of Dictinory   Key : Value--------------- \\n\\n\\n  "\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf4 for\cf5  (key,value) \cf4 in\cf5  \cf9 dicti3
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5     \cf8 print\cf5 (\cf6 "Key is \cf5 \\\cf6 (\cf5 key\cf6 ) \\t\\t\\t : Value \cf5 \\\cf6 (\cf5 value\cf6 )"\cf5 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \}
+\f0\fs24 \cf0 \
+\
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "   -------     Retrival of Dictinory    as single Object --------------- \\n\\n\\n  "\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 for\cf5  obj \cf4 in\cf5  \cf9 dicti3
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5     \cf8 print\cf5 (\cf6 "Dictinory A single object   : \\t \\t "\cf5  , obj)
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \}
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf8 print\cf5 (\cf6 "   -------     Retrival of Dictinory    Only Key  --------------- \\n\\n\\n  "\cf5 )
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf4 for\cf5  Keys \cf4 in\cf5  \cf9 dicti3
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5         \cf8 print\cf5 (\cf6 "Dictinory A single object   : \\t \\t "\cf5  , Keys)
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf5 \}
+\f0\fs24 \cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs26 \cf0 \cb1 \
+\
+}
