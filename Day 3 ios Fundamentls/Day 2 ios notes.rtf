@@ -1,0 +1,871 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red255\green255\blue255;\red170\green13\blue145;
+\red0\green0\blue0;\red196\green26\blue22;\red46\green13\blue110;\red38\green71\blue75;\red92\green38\blue153;
+\red28\green0\blue207;\red63\green110\blue116;\red14\green14\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c45600\c0;\csgray\c100000;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c77000\c10200\c8600;\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c14900\c27800\c29400;\csgenericrgb\c35900\c14900\c60100;
+\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c5500\c5500\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab543
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //: Playground - noun: a place where people can play
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 import\cf5  UIKit
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  str = \cf6 "Hello, playground"
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " -------- ------ -------- -------- Functions -------- ------ -------- --------"\cf5  )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "-------- Simple Fumction ----------"\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf4 func\cf5  add()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "\\nI m in a user define funciton add"\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 add\cf5 ()
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n\\n -------- Single Perameter  Fumction ----------"\cf5 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf4 func\cf5  welcome(name : \cf9 String\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "\\nWelcome "\cf5 ,name)
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 welcome\cf5 (name : \cf6 "Jack"\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "-------- Double Perameter Fumction ----------"\cf5 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf4 func\cf5  add(a : \cf9 Int\cf5  , b : \cf9 Int\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "\\nSum of a & b  is : "\cf5  ,a+b)
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 add\cf5 (a: \cf10 \cb3 4\cf5 \cb3 , b: \cf10 \cb3 7\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "-------- pass var in Fumction ----------"\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  a = \cf10 \cb3 30\cf5 \cb3  ; \cf4 var\cf5  b = \cf10 \cb3 50
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf8 add\cf5 (a: \cf11 \cb3 a\cf5 \cb3 , b: \cf11 \cb3 b\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n --------  Fumction  with optional Lable name---------- \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf4 func\cf5  sub (a :\cf9 Int\cf5  , \cf4 _\cf5  b: \cf9 Int\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "\\n Subtraction is  : "\cf5  , a - b)
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 sub\cf5 (a: \cf10 \cb3 160\cf5 \cb3  , \cf10 \cb3 70\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n --------  Fumction  with single return value ---------- \\n"\cf5  )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 func\cf5  multi(a: \cf9 Int\cf5  , b: \cf9 Int\cf5 ) -> \cf9 Int
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 return\cf5  a*b
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n   Multiplication of a & b : "\cf5  , \cf8 multi\cf5 (a: \cf10 \cb3 4\cf5 \cb3 , b: \cf10 \cb3 8\cf5 \cb3 ))
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n --------  Fumction  with Multiple  return value ---------- \\n"\cf5  )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 func\cf5  swip(a : \cf9 Int\cf5   , b: \cf9 Int\cf5 ) -> (\cf9 Int\cf5  , \cf9 Int\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf2 \cb3 //var t = a
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \cf2 \cb3 //a = b
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \cf2 \cb3 //b = t
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "\\n After Swip Value of a : \cf5 \\\cf6 (\cf5 b\cf6 ) & b \cf5 \\\cf6 (\cf5 a\cf6 ) \\n "\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 return\cf5  (b,a)
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 swip\cf5 (a: \cf10 \cb3 10\cf5 \cb3 , b: \cf10 \cb3 20\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  (x,z) = \cf8 swip\cf5 (a: \cf10 \cb3 40\cf5 \cb3 , b: \cf10 \cb3 70\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "After Swipe  :  \cf5 \\\cf6 (\cf11 \cb3 x\cf5 \cb3 ,\cf11 \cb3 z\cf6 \cb3 )"\cf5 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf5 (\cf4 _\cf5 ,\cf4 _\cf5 ) = \cf8 swip\cf5 (a: \cf10 \cb3 45\cf5 \cb3 , b: \cf10 \cb3 54\cf5 \cb3 )  \cf2 \cb3 // just to precess function without storing return values
+\f1\fs24 \cf0 \cb3 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //(c,_) = swip(a: 78, b: 87)
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 //print("Store Only One return value from function  : \\(c)")
+\f1\fs24 \cf0 \cb3 \
+\
+\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n --------  Fumction  with Multiple  return value  Using IN OUT key word---------- \\n"\cf5  )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 func\cf5  swipInOut(a: \cf4 inout\cf5  \cf9 Double\cf5  , b: \cf4 inout\cf5  \cf9 Double\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5   temp = a
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     a = b
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     b = temp
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "\\n After Swip Value of a : \cf5 \\\cf6 (\cf5 a\cf6 ) & b \cf5 \\\cf6 (\cf5 b\cf6 ) \\n "\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf2 \cb3 //return (a,b)
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //  print(swip(a: 67.9, b: 76.8))  This will gives error you have to declare it like
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 var\cf5  xx = \cf10 \cb3 56.7\cf5 \cb3  , zz = \cf10 \cb3 76.5
+\f1\fs24 \cf0 \cb3 \
+\
+
+\f0\fs22 \cf8 swipInOut\cf5 (a: &\cf11 \cb3 xx\cf5 \cb3 , b: &\cf11 \cb3 zz\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 /*
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  when we use double we use the reference of variable using & sign
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  */
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 func\cf5  swipeInOut(a1: \cf4 inout\cf5  \cf9 Int\cf5  , b1: \cf4 inout\cf5  \cf9 Int\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5   temp = a1
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     a1 = b1
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     b1 = temp
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "\\n Calling Inout with Int  After Swip Value of a : \cf5 \\\cf6 (\cf5 a1\cf6 ) & b \cf5 \\\cf6 (\cf5 b1\cf6 ) \\n "\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf2 \cb3 //return (a,b)
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  xi = \cf10 \cb3 5\cf5 \cb3  , zi = \cf10 \cb3 10
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf8 swipeInOut\cf5 (a1: &\cf11 \cb3 xi\cf5 \cb3 , b1: &\cf11 \cb3 zi\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n \\n ----------  Pass Array in Function   ---------- \\n \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  array:[\cf9 Int\cf5 ] = [\cf10 \cb3 1\cf5 \cb3 ,\cf10 \cb3 2\cf5 \cb3 ,\cf10 \cb3 3\cf5 \cb3 ,\cf10 \cb3 4\cf5 \cb3 ,\cf10 \cb3 5\cf5 \cb3 ]
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 func\cf5  printArrayValue(array : \cf9 Array\cf5 <\cf9 Int\cf5 >)
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 for\cf5  i \cf4 in\cf5  array
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf7 print\cf5 (\cf6 "Array Value  :  \cf5 \\\cf6 (\cf5 i\cf6 )"\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \} \cf2 \cb3 // for
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 printArrayValue\cf5 (array : \cf11 \cb3 array\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n \\n ----------  Pass Array as Variadic Parameters in Function    ---------- \\n \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 func\cf5  printArrayValue(array : \cf9 Int\cf5 ...)
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 for\cf5  i \cf4 in\cf5  array
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf7 print\cf5 (\cf6 "Array Value  Variadic Parameters :  \cf5 \\\cf6 (\cf5 i\cf6 )"\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \} \cf2 \cb3 // for
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf8 printArrayValue\cf5 (array: \cf10 \cb3 1\cf5 \cb3 ,\cf10 \cb3 3\cf5 \cb3 ,\cf10 \cb3 5\cf5 \cb3 ,\cf10 \cb3 7\cf5 \cb3 ,\cf10 \cb3 9\cf5 \cb3 ,\cf10 \cb3 11\cf5 \cb3 ,\cf10 \cb3 13\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n \\n ----------  Pass Variable List as Variadic Parameters in Function    ---------- \\n \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  v1:\cf9 Int\cf5  = \cf10 \cb3 2\cf5 \cb3  ,v2:\cf9 Int\cf5  = \cf10 \cb3 6\cf5 \cb3 ,v3:\cf9 Int\cf5  = \cf10 \cb3 9
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf8 printArrayValue\cf5 (array: \cf11 \cb3 v1\cf5 \cb3 ,\cf11 \cb3 v2\cf5 \cb3 ,\cf11 \cb3 v3\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //var va1:[Int] = [21,22,23] , va2:[Int] = [31,32,33] , va3:[Int] = [41,42,43]
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 //printArrayValue(array: va1,va2,va3)
+\f1\fs24 \cf0 \cb3 \
+\
+
+\f0\fs22 \cf2 \cb3 /*
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 func variadic(n : Int... , m: String...)
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 \{
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3     
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 \}
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  ERROR :
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 only a single variadic parameter '...' is permitted
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 */
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n \\n ---------- Lables rename facility in Function   ---------- \\n \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 func\cf5  renameLable(number a : \cf9 Int\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "We use Lable 'a' in side function \cf5 \\\cf6 (\cf5 a\cf6 ) and while calling we can use 'number' lable"\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 renameLable\cf5 (number: \cf10 \cb3 676\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n \\n ---------- Default Value in Function Variable ---------- \\n \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+\
+\
+
+\f0\fs22 \cf5  \cf2 \cb3 // default value can b inbetween ofother variable with use of _
+\f1\fs24 \cf0 \cb3 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 // but without use of _ defailt declaration should b at the end .
+\f1\fs24 \cf0 \cb3 \
+\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 func\cf5  simpleIntrest(amount: \cf9 Double\cf5  , noOfYears: \cf9 Double\cf5 , \cf4 _\cf5  rate:\cf9 Double\cf5  = \cf10 \cb3 5\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "Simple Intrest is : "\cf5 ,((amount * noOfYears) * rate) / \cf10 \cb3 100\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 simpleIntrest\cf5 (amount: \cf10 \cb3 10000\cf5 \cb3 , noOfYears: \cf10 \cb3 4.3\cf5 \cb3  , \cf10 \cb3 34\cf5 \cb3 )  \cf2 \cb3 // we do not have to give lable name
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf8 simpleIntrest\cf5 (amount: \cf10 \cb3 10000\cf5 \cb3 , noOfYears: \cf10 \cb3 4.3\cf5 \cb3  ) \cf2 \cb3 // we use default value of rate
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 // we use the same function name but prameter type is difrent
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 func\cf5  simpleIntrest(amount: \cf9 Double\cf5  , noOfYears: \cf9 Int\cf5 , \cf4 _\cf5  rate:\cf9 Double\cf5  = \cf10 \cb3 5\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "Simple Intrest using TypeCast is : "\cf5 ,((amount * \cf9 Double\cf5 (noOfYears)) * rate) / \cf10 \cb3 100\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 simpleIntrest\cf5 (amount: \cf10 \cb3 10000\cf5 \cb3 , noOfYears: \cf10 \cb3 4\cf5 \cb3  , \cf10 \cb3 7\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n \\n ---------- Sum of array  with inout ---------- \\n \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf4 var\cf5  array1: [\cf9 Int\cf5 ] = [\cf10 \cb3 21\cf5 \cb3 ,\cf10 \cb3 22\cf5 \cb3 ,\cf10 \cb3 23\cf5 \cb3 ,\cf10 \cb3 24\cf5 \cb3 ,\cf10 \cb3 25\cf5 \cb3 ]
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf4 var\cf5  array2: [\cf9 Int\cf5 ] = [\cf10 \cb3 31\cf5 \cb3 ,\cf10 \cb3 32\cf5 \cb3 ,\cf10 \cb3 33\cf5 \cb3 ,\cf10 \cb3 34\cf5 \cb3 ,\cf10 \cb3 35\cf5 \cb3 ]
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 func\cf5  sumOfArray1(ar1: [\cf9 Int\cf5 ] , ar2: \cf4 inout\cf5  [\cf9 Int\cf5 ]) \cf2 \cb3 //-> [Int]
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  temp = \cf9 Array\cf5 <\cf9 Int\cf5 >()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 if\cf5  (ar1.\cf9 count\cf5  == ar2.\cf9 count\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 var\cf5  counter = ar1.\cf9 count\cf5  , i = \cf10 \cb3 0
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5         \cf4 while\cf5  i != counter
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             temp.\cf7 append\cf5 (ar1[i] + ar2[i])   \cf2 \cb3 // for blank array we have to use .append method
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5             i = i + \cf10 \cb3 1
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5         \}\cf2 \cb3 // while
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \}\cf2 \cb3 // if
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     ar2.\cf7 removeAll\cf5 ()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     ar2 = temp
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "Sum of array is  :   \cf5 \\\cf6 (\cf5 ar2\cf6 )"\cf5 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf2 \cb3 //return temp
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf8 sumOfArray1\cf5 (ar1: \cf11 \cb3 array1\cf5 \cb3 , ar2: &\cf11 \cb3 array2\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n \\n ---------- Sum of array  with diffrent method  ---------- \\n \\n "\cf5 )
+\f1\fs24 \cf0 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //Sum of two array
+\f1\fs24 \cf0 \cb3 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 func\cf5  display(arrayList:[\cf9 Int\cf5 ]...) -> [\cf9 Int\cf5 ]
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  array1 = arrayList[\cf10 \cb3 0\cf5 \cb3 ]
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  array2 = arrayList[\cf10 \cb3 1\cf5 \cb3 ]
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  result = [\cf9 Int\cf5 ]()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 if\cf5  array1.\cf9 count\cf5  == array2.\cf9 count
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 for\cf5  i \cf4 in\cf5  \cf10 \cb3 0\cf5 \cb3 ..<array1.\cf9 count
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             result.\cf7 append\cf5 (array1[i] + array2[i])
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 return\cf5  result
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf4 var\cf5  a1 = [\cf10 \cb3 1\cf5 \cb3 ,\cf10 \cb3 2\cf5 \cb3 ,\cf10 \cb3 3\cf5 \cb3 ,\cf10 \cb3 4\cf5 \cb3 ,\cf10 \cb3 5\cf5 \cb3 ]
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf4 var\cf5  a2 = [\cf10 \cb3 10\cf5 \cb3 ,\cf10 \cb3 11\cf5 \cb3 ,\cf10 \cb3 12\cf5 \cb3 ,\cf10 \cb3 13\cf5 \cb3 ,\cf10 \cb3 14\cf5 \cb3 ]
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf4 var\cf5  a3 = \cf8 display\cf5 (arrayList:\cf11 \cb3 a1\cf5 \cb3 ,\cf11 \cb3 a2\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf7 print\cf5 (\cf11 \cb3 a1\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf7 print\cf5 (\cf11 \cb3 a2\cf5 \cb3 )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf7 print\cf5 (\cf11 \cb3 a3\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " ----------------   Create array from string  ------------------"\cf5  )
+\f1\fs24 \cf0 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //\cf12 \cb3 https://stackoverflow.com/questions/38358312/componentsseparatedbystring-error-in-swift-3
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 var\cf5  arrayInString = \cf6 "1 34 56 4 67 456 234 4 56"
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  arrayFromString = \cf9 Array\cf5 <\cf9 Int\cf5 >()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf4 var\cf5  tempArray: [\cf9 String\cf5 ] = \cf11 \cb3 arrayInString\cf5 \cb3 .\cf7 components\cf5 (separatedBy:\cf6 " "\cf5 ) \cf2 \cb3 //split(separator: splitC)
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " Array as string  "\cf5  ,\cf11 \cb3 tempArray\cf5 \cb3   ,\cf6 " \\n\\n\\n"\cf5  )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  count = \cf11 \cb3 tempArray\cf5 \cb3 .\cf9 count
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf4 var\cf5  ai = \cf10 \cb3 0
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 /*
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  convert String to Ineger
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  1>  ("45" as NSString).integerValue     from simple string
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  2>  Int(tempArray["String value"])!     from array value
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3  */
+\f1\fs24 \cf0 \cb3 \
+\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 while\cf5  \cf11 \cb3 ai\cf5 \cb3  != \cf11 \cb3 count
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf7 print\cf5 (\cf6 "Index is \cf5 \\\cf6 (\cf11 \cb3 ai\cf6 \cb3 ) : \cf5 \\\cf6 (\cf11 \cb3 tempArray\cf5 \cb3 [\cf11 \cb3 ai\cf5 \cb3 ]\cf6 ) "\cf5  )  \cf2 \cb3 //  convert string value to Interger isc ::    , Int(tempArray["String value"])!    or ("45" as NSString).integerValue
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5    \cf11 \cb3 arrayFromString\cf5 \cb3 .\cf7 append\cf5 (\cf9 Int\cf5 (\cf11 \cb3 tempArray\cf5 \cb3 [\cf11 \cb3 ai\cf5 \cb3 ])!)
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf11 \cb3 ai\cf5 \cb3  = \cf11 \cb3 ai\cf5 \cb3  + \cf10 \cb3 1
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5 \}\cf2 \cb3 //while
+\f1\fs24 \cf0 \cb3 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "Interger  Array from String   :  \cf5 \\\cf6 (\cf11 \cb3 arrayFromString\cf6 \cb3 )"\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n\\nString Value to ineger   ------    "\cf5  , (\cf6 "45"\cf5  \cf4 as\cf5  \cf9 NSString\cf5 ).\cf9 integerValue\cf5   )
+\f1\fs24 \cf0 \
+\
+\
+\
+\
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n\\n\\n ----------------  Closures   ------------------"\cf5  );
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  StringA = [\cf6 "abc"\cf5  , \cf6 "bcd"\cf5 , \cf6 "cde"\cf5 , \cf6 "def"\cf5  ,\cf6 "efg"\cf5  ]
+\f1\fs24 \cf0 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf11 \cb3 StringA\cf5 \cb3  = \cf11 \cb3 StringA\cf5 \cb3 .\cf7 sorted
+\f1\fs24 \cf0 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5   (s1: \cf9 String\cf5 , s2: \cf9 String\cf5 ) -> \cf9 Bool\cf5  \cf4 in
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 return\cf5  s1 > s2
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n\\n sorting s1 > s2 "\cf5  , \cf11 \cb3 StringA\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf11 \cb3 StringA\cf5 \cb3  = \cf11 \cb3 StringA\cf5 \cb3 .\cf7 sorted
+\f1\fs24 \cf0 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         (s1: \cf9 String\cf5 , s2: \cf9 String\cf5 ) -> \cf9 Bool\cf5  \cf4 in
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 return\cf5  s1 < s2
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n\\n sorting s1 < s2 "\cf5  , \cf11 \cb3 StringA\cf5 \cb3 )
+\f1\fs24 \cf0 \
+\
+\
+\
+
+\f0\fs22 \cf4 var\cf5  ac1 = \cf10 \cb3 10
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf4 var\cf5  ac2 = \cf10 \cb3 20
+\f1\fs24 \cf0 \cb3 \
+\
+\
+
+\f0\fs22 \cf4 var\cf5  ac3 = \{ (ac1: \cf9 Int\cf5 , ac2: \cf9 Int\cf5 ) -> \cf9 Int\cf5  \cf4 in
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 return\cf5  ac1 + ac2
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}\cf2 \cb3 // Closures
+\f1\fs24 \cf0 \cb3 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "\\n\\n Sum of 2 Interger in closures   :   "\cf5  , \cf11 \cb3 ac3\cf5 \cb3 (\cf10 \cb3 10\cf5 \cb3 ,\cf10 \cb3 30\cf5 \cb3 ))
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 " \\n\\n\\n ---------------- Sum of Array in  Closures   ------------------"\cf5  );
+\f1\fs24 \cf0 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //----------- sum of arrayFromString
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf2 \cb3 // Interger  Array from String   :  [1, 34, 56, 4, 67, 456, 234, 4, 56]
+\f1\fs24 \cf0 \cb3 \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf4 var\cf5  sumOfArray =
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     (array1: [\cf9 Int\cf5 ]) -> \cf9 Int\cf5  \cf4 in
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  counter = array1.\cf9 count
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  i = \cf10 \cb3 0
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  sumOfArray = \cf10 \cb3 0
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \cf4 while\cf5  i != \cf11 \cb3 count
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         sumOfArray =  sumOfArray + \cf11 \cb3 arrayFromString\cf5 \cb3 [i]
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \}\cf2 \cb3 //  while
+\f1\fs24 \cf0 \cb3 \
+
+\f0\fs22 \cf5     \cf4 return\cf5  sumOfArray
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "   ----  sum of array is  : "\cf5  , \cf11 \cb3 sumOfArray\cf5 \cb3 (\cf11 \cb3 arrayFromString\cf5 \cb3 ) )
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf7 print\cf5 (\cf6 "lalalalal "\cf5  )
+\f1\fs24 \cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+}
