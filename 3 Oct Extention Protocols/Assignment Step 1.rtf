@@ -1,0 +1,216 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red255\green255\blue255;\red170\green13\blue145;
+\red0\green0\blue0;\red92\green38\blue153;\red63\green110\blue116;\red28\green0\blue207;\red196\green26\blue22;
+\red46\green13\blue110;\red38\green71\blue75;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c45600\c0;\csgray\c100000;\csgenericrgb\c66500\c5200\c56900;
+\csgenericrgb\c0\c0\c0;\csgenericrgb\c35900\c14900\c60100;\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c77000\c10200\c8600;
+\csgenericrgb\c18100\c5200\c43100;\csgenericrgb\c14900\c27800\c29400;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab543
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 //: Playground - noun: a place where people can play
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 import\cf5  UIKit
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 protocol\cf5  Icaculate
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 func\cf5  Calculae(a:\cf6 Int\cf5 , b: \cf6 Int\cf5  , o: \cf6 Character\cf5 ) ->\cf6 Int
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \} \cf2 // Icaculate
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 class\cf5  Addition : \cf7 Icaculate
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  a: \cf6 Int\cf5 !
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  b: \cf6 Int\cf5 !
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 init\cf5 ()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf7 a\cf5  = \cf8 1_000_00
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf7 b\cf5  = \cf8 1_00
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 func\cf5  Calculae(a: \cf6 Int\cf5 , b: \cf6 Int\cf5 , o: \cf6 Character\cf5 ) -> \cf6 Int
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 self\cf5 .\cf7 a\cf5  = a
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 self\cf5 .\cf7 b\cf5  = b
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 switch\cf5  o
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 case\cf5  \cf9 "+"\cf5 :
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             \cf4 return\cf5  a+b
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 default\cf5 :
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             \cf4 return\cf5  \cf8 0
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 \ulth \ulc4 r\ulnone eturn\cf5  \cf8 0
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}\cf2 // class Addition
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf4 class\cf5  Subtraction : \cf7 Icaculate
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  a: \cf6 Int\cf5 !
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 var\cf5  b: \cf6 Int\cf5 !
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 init\cf5 ()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf7 a\cf5  = \cf8 1_000_00
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf7 b\cf5  = \cf8 1_00
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \cf4 func\cf5  Calculae(a: \cf6 Int\cf5 , b: \cf6 Int\cf5 , o: \cf6 Character\cf5 ) -> \cf6 Int
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 self\cf5 .\cf7 a\cf5  = a
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 self\cf5 .\cf7 b\cf5  = b
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 switch\cf5  o
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \{
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 case\cf5  \cf9 "-"\cf5 :
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             \cf4 if\cf5  a > b
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             \{    \cf4 return\cf5  a-b     \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             \cf4 else
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             \{    \cf4 return\cf5  \cf8 0\cf5        \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 default\cf5 :
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5             \cf4 return\cf5  \cf8 0
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5         \cf4 \ulth r\ulnone eturn\cf5  \cf8 0
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5     \}
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf5 \}\cf2 // class Subtraction
+\f1\fs24 \cf0 \
+\
+\
+
+\f0\fs22 \cf4 var\cf5  A1 = \cf7 Addition\cf5 ()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf10 print\cf5 (\cf9 "Addition :  \cf5 \\\cf9 (\cf7 A1\cf5 .\cf11 Calculae\cf5 (a: \cf8 1_00_00\cf5 , b: \cf8 100\cf5 , o: \cf9 "+"\cf5 )\cf9 )"\cf5 )
+\f1\fs24 \cf0 \
+\
+
+\f0\fs22 \cf4 var\cf5  S1 = \cf7 Subtraction\cf5 ()
+\f1\fs24 \cf0 \
+
+\f0\fs22 \cf10 print\cf5 (\cf9 "Subtraction :  \cf5 \\\cf9 (\cf7 S1\cf5 .\cf11 Calculae\cf5 (a: \cf8 1_00_00\cf5 , b: \cf8 100\cf5 , o: \cf9 "-"\cf5 )\cf9 )"\cf5 )
+\f1\fs24 \cf0 \
+\
+}
