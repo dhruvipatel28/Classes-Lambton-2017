@@ -4,7 +4,8 @@
 //
 //  Created by MacStudent on 2017-10-18.
 //  Copyright © 2017 Dhruvi Patel. All rights reserved.
-//
+//   Timer link
+// https://stackoverflow.com/questions/24007518/how-can-i-use-nstimer-in-swift
 
 import UIKit
 
