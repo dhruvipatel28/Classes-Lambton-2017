@@ -1,0 +1,113 @@
+	let alert  = UIAlertController(title: "Login Response", message: "You failed to logged In", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let actionTryAgain = UIAlertAction(title: "Try Again", style: UIAlertActionStyle.destructive, handler: nil)
+        let actionCancle = UIAlertAction(title: "Cancle", style: UIAlertActionStyle.cancel, handler: nil)
+        let actiionOk = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        let actionConfirm = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default
+            , handler:
+            {
+                _ in self.someHandler()
+            }
+        );
+        
+        alert.addAction(actionTryAgain)
+        alert.addAction(actionCancle)
+        alert.addAction(actiionOk)
+        alert.addAction(actionConfirm)
+        
+        self.present(alert, animated: true, completion: nil)
+		
+//-----------------------------------------------------------		
+
+
+ @IBAction func slider_change(_ sender: UISlider)
+    {
+        lbl_switch_change.text = " Slider \(Int(sender.value))"
+        // we have set the slider minimum n maximum values 0 , 100 respectively.
+        // thats y we can accsess Value of slider here
+        progress_bar.progress = Float(sender.value/100 )
+      // this will give values between 0 to 1
+        // coz progress bar can have values between 0 -1
+    }
+
+
+//-----------------------------------------------------------		
+		let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-mm-yyyy"
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
+        emp.birthDate = dateFormatter.date(from: txtEmpBirthdate.text!)    
+//-----------------------------------------------------------
+
+			let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let empViewController = storyBoard.instantiateViewController(withIdentifier: "empScreen") as! EmployeeViewController
+            self.present(empViewController, animated: true, completion: nil)
+			
+//----------------------------------------------------------------
+
+	
+		let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil) // from where to move
+        let secondViewController = storyBoard.instantiateViewController(withIdentifier: "secondViewController") as! secondViewController
+        secondViewController.email = txt_userName.text
+        self.present(secondViewController, animated: true, completion: nil)
+        
+//----------------------------------------------------------------
+
+	func loadFromString()
+    {
+        webView.loadHTMLString("<htlm><body> <h1> Welcome </h1> </body></html>", baseURL: nil)
+    }
+    
+    func loadFromURl()
+    {
+        let url = URL(string: "https://makeapppie.com/2016/07/11/programmatic-navigation-view-controllers-in-swift-3-0/")
+        let requestObj = URLRequest(url: url!)
+        webView.loadRequest(requestObj)
+    }
+    
+    
+    func  loadMyHeml()
+    {
+        let localfilePath = Bundle.main.url(forResource: "htmlFile", withExtension: "html")
+        let myRequest =  URLRequest(url: localfilePath!)
+        webView.loadRequest(myRequest)
+    }
+
+//----------------------------------------------------------------
+
+select view controller 
+
+-> editor 
+	->  Embed in
+		-> Navigation Controller
+
+this will handle navigation default.
+
+
+after that you have to add line
+ navigationController?.pushViewController(registerEmployee, animated: true)
+
+and need to comment 
+self.present(registerEmployee, animated: true, completion: nil)
+
+
+self.title to set the title of navigation control
+
+
+//----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
